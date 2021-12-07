@@ -1,0 +1,11 @@
+{
+    "Govno": {
+        "ready": false
+    },
+    "Govno2": {
+        "ready": true
+    },
+    "Govno3": {
+        "ready": false
+    }
+}
