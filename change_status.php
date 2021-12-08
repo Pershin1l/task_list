@@ -1,11 +1,7 @@
 <?php
-
-$json = file_get_contents('tasks.json');
-$jsonArray = json_decode($json, true);
+session_start();
 
 $taskName = $_POST['task_name'];
-$jsonArray[$taskName]['ready'] = !$jsonArray[$taskName]['ready'];
-
-file_put_contents('tasks.json', json_encode($jsonArray, JSON_PRETTY_PRINT));
+$_SESSION["tasks"][$taskName]['ready'] = !$_SESSION["tasks"][$taskName]['ready'];
 
 header('Location: index.php');

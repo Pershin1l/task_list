@@ -1,5 +1,5 @@
 <?php
-
-file_put_contents('tasks.json', json_encode([]));
+session_start();
+$_SESSION["tasks"] = [];
 
 header('Location: index.php');
