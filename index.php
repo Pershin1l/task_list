@@ -30,7 +30,7 @@ session_start();
     <button style="background-color: white; width: 100px; height: 26px; border-radius: 8px"><b>READY ALL</b></button>
 </form>
 
-<?php foreach ($_SESSION["tasks"] as $taskName => $task): ?>
+<?php if (isset($_SESSION['tasks'])) foreach ($_SESSION['tasks'] as $taskName => $task): ?>
     <div style="margin-bottom: 10px;">
         <p><?php echo $task['ready'] ? '<font color="green"; size="4px"><b>●</b></font>' : '<font color="red"; size="4px"><b>●</b></font>' ?>&ensp;<font size="4px"><?php echo $taskName ?></font>  </>
         <form style="display: inline-block" action="change_status.php" method="post">
